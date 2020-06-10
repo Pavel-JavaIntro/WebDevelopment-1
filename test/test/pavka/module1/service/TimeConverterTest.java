@@ -10,13 +10,15 @@ public class TimeConverterTest {
 
   @Test
   public void test1FindHoursMinutesSeconds() {
-    int[] time = {1, 1, 1};
-    assertEquals(timeConverter.findHoursMinutesSeconds(3661), time);
+    int[] expected = {1, 1, 1};
+    int[] actual = timeConverter.findHoursMinutesSeconds(3661);
+    assertEquals(actual, expected);
   }
 
   @Test
   public void test2FindHoursMinutesSeconds() {
-    int[] time = {-1, -1, -1};
-    assertEquals(timeConverter.findHoursMinutesSeconds(-3661), time);
+    int[] expected = {-1, -1, -1};
+    int[] actual = timeConverter.findHoursMinutesSeconds(-3661);
+    assertEquals(actual, expected);
   }
 }
