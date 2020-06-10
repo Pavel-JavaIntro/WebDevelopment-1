@@ -12,20 +12,23 @@ public class FunctionWithTwoBranchesTest {
   public void test1CalculateFunction() {
     double x = 2;
     double expected = 0.5;
-    assertEquals(function.claculateFunction(x), expected);
+    double actual = function.claculateFunction(x);
+    assertEquals(actual, expected);
   }
 
   @Test
   public void test2CalculateFunction() {
     double x = 4.0;
     double expected = 5;
-    assertEquals(function.claculateFunction(x), expected);
+    double actual = function.claculateFunction(x);
+    assertEquals(actual, expected);
   }
 
   @Test
   public void test3CalculateFunction() {
     double x = Math.pow(6, 1/3.0);
     double expected = Double.POSITIVE_INFINITY;
-    assertEquals(function.claculateFunction(x), expected);
+    double actual = function.claculateFunction(x);
+    assertEquals(actual, expected);
   }
 }
