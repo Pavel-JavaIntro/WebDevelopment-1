@@ -12,30 +12,35 @@ public class CalendarValidatorTest {
   @Test
   public void test1IsValidYear() {
     int year = 2020;
-    assertTrue(calendarValidator.isValidYear(year));
+    boolean valid = calendarValidator.isValidYear(year);
+    assertTrue(valid);
   }
 
   @Test
   public void test2IsValidYear() {
     int year = 1451;
-    assertFalse(calendarValidator.isValidYear(year));
+    boolean valid = calendarValidator.isValidYear(year);
+    assertFalse(valid);
   }
 
   @Test
   public void test1IsValidMonth() {
     int month = 0;
-    assertTrue(calendarValidator.isValidMonth(month));
+    boolean valid = calendarValidator.isValidMonth(month);
+    assertTrue(valid);
   }
 
   @Test
   public void test2IsValidMonth() {
     int month = 12;
-    assertFalse(calendarValidator.isValidMonth(month));
+    boolean valid = calendarValidator.isValidMonth(month);
+    assertFalse(valid);
   }
 
   @Test
   public void test3IsValidMonth() {
     int month = -2;
-    assertFalse(calendarValidator.isValidMonth(month));
+    boolean valid = calendarValidator.isValidMonth(month);
+    assertFalse(valid);
   }
 }
