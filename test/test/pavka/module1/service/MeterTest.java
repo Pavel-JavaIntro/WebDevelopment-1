@@ -15,7 +15,8 @@ public class MeterTest {
     Point p1 = new Point(1, 1);
     Point p2 = new Point(1.0, 1.0);
     Point expected = new Point(1, 1.0);
-    assertEquals(meter.findCloserToZero(p1, p2), expected);
+    Point actual = meter.findCloserToZero(p1, p2);
+    assertEquals(actual, expected);
   }
 
   @Test
@@ -23,7 +24,8 @@ public class MeterTest {
     Point p1 = new Point(1, 1);
     Point p2 = new Point(1.0, 1.0);
     Point expected = p1;
-    assertEquals(meter.findCloserToZero(p1, p2), expected);
+    Point actual = meter.findCloserToZero(p1, p2);
+    assertEquals(actual, expected);
   }
 
   @Test
@@ -31,7 +33,8 @@ public class MeterTest {
     Point p1 = new Point(1, 1);
     Point p2 = new Point(1.0, 1.0);
     Point expected = p2;
-    assertEquals(meter.findCloserToZero(p1, p2), expected);
+    Point actual = meter.findCloserToZero(p1, p2);
+    assertEquals(actual, expected);
   }
 
   @Test
@@ -39,7 +42,8 @@ public class MeterTest {
     Point p1 = new Point(2, 1);
     Point p2 = new Point(1.0, 1.0);
     Point expected = p2;
-    assertEquals(meter.findCloserToZero(p1, p2), expected);
+    Point actual = meter.findCloserToZero(p1, p2);
+    assertEquals(actual, expected);
   }
 
   @Test
@@ -47,6 +51,7 @@ public class MeterTest {
     Point p1 = new Point(2, 1);
     Point p2 = new Point(1.0, 1.0);
     Point expected = p1;
-    assertNotEquals(meter.findCloserToZero(p1, p2), expected);
+    Point actual = meter.findCloserToZero(p1, p2);
+    assertNotEquals(actual, expected);
   }
 }
