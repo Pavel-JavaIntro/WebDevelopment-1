@@ -12,19 +12,22 @@ public class NonNegativeAreaValidatorTest {
   @Test
   public void test1IsAreaNegative() {
     double area = -1;
-    assertTrue(validator.isAreaNegative(area));
+    boolean valid = validator.isAreaNegative(area);
+    assertTrue(valid);
   }
 
   @Test
   public void test2IsAreaNegative() {
     double area = 0.0;
-    assertFalse(validator.isAreaNegative(area));
+    boolean valid = validator.isAreaNegative(area);
+    assertFalse(valid);
   }
 
   @Test
   public void test3IsAreaNegative() {
     double area = 10.0;
-    assertFalse(validator.isAreaNegative(area));
+    boolean valid = validator.isAreaNegative(area);
+    assertFalse(valid);
   }
 
   @Test
