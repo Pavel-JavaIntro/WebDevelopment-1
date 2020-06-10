@@ -5,6 +5,7 @@ import by.pavka.module1.service.MonthCalculator;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.fail;
 
 public class MonthCalculatorTest {
 
@@ -22,16 +23,30 @@ public class MonthCalculatorTest {
   }
 
   @Test
-  public void test3FindDays() throws GregDateFormatException {
-    MonthCalculator monthCalculator = new MonthCalculator(1600);
+  public void test3FindDays() {
+    MonthCalculator monthCalculator = null;
     int expected = 29;
-    assertEquals(monthCalculator.findDays(1), expected);
+    int actual = 0;
+    try {
+      monthCalculator = new MonthCalculator(1600);
+      actual = monthCalculator.findDays(1);
+    } catch (GregDateFormatException e) {
+      fail();
+    }
+    assertEquals(actual, expected);
   }
 
   @Test
-  public void test4FindDays() throws GregDateFormatException {
-    MonthCalculator monthCalculator = new MonthCalculator(1700);
+  public void test4FindDays() {
+    MonthCalculator monthCalculator = null;
     int expected = 28;
-    assertEquals(monthCalculator.findDays(1), expected);
+    int actual = 0;
+    try {
+      monthCalculator = new MonthCalculator(1700);
+      actual = monthCalculator.findDays(1);
+    } catch (GregDateFormatException e) {
+      fail();
+    }
+    assertEquals(actual, expected);
   }
 }
