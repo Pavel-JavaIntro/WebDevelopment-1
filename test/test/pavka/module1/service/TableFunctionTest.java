@@ -14,6 +14,7 @@ public class TableFunctionTest {
   public void testFunctionToTable() {
     Map<Double, Double> results = table.functionToTable(0.1, 0, 1);
     Double expected = Math.tan(0.2);
-    assertEquals(results.get(0.2), expected);
+    Double actual = results.get(0.2);
+    assertEquals(actual, expected);
   }
 }
