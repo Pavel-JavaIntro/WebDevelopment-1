@@ -12,12 +12,14 @@ public class PerfectionCheckerTest {
   @Test
   public void test1IsPerfect() {
     int number = 6;
-    assertTrue(perfectionChecker.isPerfect(number));
+    boolean perfect = perfectionChecker.isPerfect(number);
+    assertTrue(perfect);
   }
 
   @Test
   public void test2IsPerfect() {
     int number = 7;
-    assertFalse(perfectionChecker.isPerfect(number));
+    boolean perfect = perfectionChecker.isPerfect(number);
+    assertFalse(perfect);
   }
 }
