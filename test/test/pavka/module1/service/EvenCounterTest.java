@@ -11,11 +11,13 @@ public class EvenCounterTest {
 
   @Test
   public void test1HaveAtLeastTwoEvens() {
-    assertTrue(evenCounter.haveAtLeastTwoEvens(2, 4, 5));
+    boolean actual = evenCounter.haveAtLeastTwoEvens(2, 4, 5);
+    assertTrue(actual);
   }
 
   @Test
   public void test2HaveAtLeastTwoEvens() {
-    assertFalse(evenCounter.haveAtLeastTwoEvens(2, 5, 7, 9, 1));
+    boolean actual = evenCounter.haveAtLeastTwoEvens(2, 5, 7, 9, 1);
+    assertFalse(actual);
   }
 }
